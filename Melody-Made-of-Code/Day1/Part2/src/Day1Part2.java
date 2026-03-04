@@ -7,8 +7,8 @@ import java.nio.file.Path;
 public class Day1Part2 {
     public static int BinToInt(String bin) {
         int ans = 0;
-        int bits = bin.length();
-        for (int j = 0; j < bits; j++) {
+        int bits = bin.length()-1;
+        for (int j = 0; j <= bits; j++) {
             if (bin.charAt(j) < 97) {
                 ans += (int) Math.pow(2,bits-j);
             }
